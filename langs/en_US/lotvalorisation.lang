@@ -1,0 +1,5 @@
+LotValorisation=Lot valuation
+LotValorisationDesc=Choose, per warehouse, whether outbound stock uses the default PMP or the stored lot valuation.
+LotValorisationMode=Valuation mode
+LotValorisationModeDefault=Default mode
+LotValorisationModeLot=Lot mode

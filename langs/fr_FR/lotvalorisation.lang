@@ -1,0 +1,5 @@
+LotValorisation=Valorisation par lot
+LotValorisationDesc=Choisissez, par entrepot, si la sortie doit utiliser le PMP par défaut ou la valorisation stockée du lot.
+LotValorisationMode=Mode de valorisation
+LotValorisationModeDefault=Mode par défaut
+LotValorisationModeLot=Mode par lot
