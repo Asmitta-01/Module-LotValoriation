@@ -7,7 +7,7 @@ dol_include_once('/lotvalorisation/class/lotvalorisation.class.php');
 /**
  * Hook actions for lot valuation module.
  */
-class ActionsLotvalorisation extends \CommonHookActions
+class ActionsLotvalorisation
 {
     public $db;
     public $error = '';

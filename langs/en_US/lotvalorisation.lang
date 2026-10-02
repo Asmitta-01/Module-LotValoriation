@@ -3,3 +3,4 @@ LotValorisationDesc=Choose, per warehouse, whether outbound stock uses the defau
 LotValorisationMode=Valuation mode
 LotValorisationModeDefault=Default mode
 LotValorisationModeLot=Lot mode
+LotValuationPrices=Lot valuation prices

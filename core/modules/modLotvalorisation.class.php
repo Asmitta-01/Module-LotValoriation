@@ -45,6 +45,37 @@ class modLotvalorisation extends \DolibarrModules
         $this->dirs = array();
         $this->langfiles = array('lotvalorisation@lotvalorisation');
         $this->rights = array();
+
+        $r = 0;
+        $this->menu = array();
+        $this->menu[$r++] = array(
+            'fk_menu' => 'fk_mainmenu=products',
+            'type' => 'left',
+            'titre' => 'LotValorisation',
+            'mainmenu' => 'products',
+            'leftmenu' => 'lotvalorisation',
+            'url' => '/lotvalorisation/admin/setup.php',
+            'langs' => 'lotvalorisation@lotvalorisation',
+            'position' => 2200,
+            'enabled' => '$conf->lotvalorisation->enabled',
+            'perms' => '$user->admin',
+            'target' => '',
+            'user' => 2,
+        );
+        $this->menu[$r++] = array(
+            'fk_menu' => 'fk_mainmenu=products,fk_leftmenu=lotvalorisation',
+            'type' => 'left',
+            'titre' => 'LotValuationPrices',
+            'mainmenu' => 'products',
+            'leftmenu' => 'lotvalorisation_prices',
+            'url' => '/lotvalorisation/admin/lotprices.php',
+            'langs' => 'lotvalorisation@lotvalorisation',
+            'position' => 2210,
+            'enabled' => '$conf->lotvalorisation->enabled',
+            'perms' => '$user->admin',
+            'target' => '',
+            'user' => 2, // User visibility: 0=internal only, 1=external only, 2=both
+        );
     }
 
     /**

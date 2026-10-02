@@ -6,7 +6,7 @@ dol_include_once('/lotvalorisation/class/lotvalorisation.class.php');
 
 // global $db;
 
-$langs->load(array('admin', 'stocks', 'lotvalorisation@lotvalorisation'));
+$langs->load('lotvalorisation@lotvalorisation');
 
 if (!$user->admin) {
     accessforbidden();
@@ -40,7 +40,8 @@ if ($action === 'save') {
 
 llxHeader('', $langs->trans('LotValorisation'));
 
-print load_fiche_titre($langs->trans('LotValorisation'), '', 'stock');
+$linkback = strpos($_SERVER['HTTP_REFERER'], DOL_URL_ROOT . '/admin/modules.php') !== false ? '<a href="' . DOL_URL_ROOT . '/admin/modules.php">' . $langs->trans("BackToModuleList") . '</a>' : '';
+print load_fiche_titre($langs->trans('LotValorisation'), $linkback, 'stock');
 print '<form method="POST" action="' . $_SERVER['PHP_SELF'] . '">';
 print '<input type="hidden" name="token" value="' . newToken() . '">';
 print '<input type="hidden" name="action" value="save">';
@@ -65,6 +66,8 @@ foreach ($warehouses as $warehouse) {
 
 print '</table>';
 print '<div class="center margin-top"><input type="submit" class="button button-save" value="' . $langs->trans('Save') . '">';
+print '&nbsp;';
+print '<a class="button" href="' . DOL_URL_ROOT . '/custom/lotvalorisation/admin/lotprices.php">' . $langs->trans('LotValuationPrices') . '</a>';
 print '</div>';
 print '</form>';
 
